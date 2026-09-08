@@ -294,6 +294,20 @@
   }
 }
 
+@utility service-card {
+  border: 1px solid color-mix(in oklab, var(--border) 55%, transparent);
+  border-radius: 1.25rem;
+  background: color-mix(in oklab, var(--card) 92%, transparent);
+  box-shadow: 0 14px 40px color-mix(in oklab, var(--primary) 4%, transparent);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 50px color-mix(in oklab, var(--primary) 7%, transparent);
+    border-color: color-mix(in oklab, var(--primary) 22%, transparent);
+  }
+}
+
 @utility project-preview-frame {
   border: 1px solid color-mix(in oklab, var(--preview-line) 80%, transparent);
   border-radius: 0.75rem;
