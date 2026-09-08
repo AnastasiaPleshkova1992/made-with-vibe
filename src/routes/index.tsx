@@ -141,6 +141,7 @@ function Index() {
         </section>
       </main>
       <FeaturedWork />
+      <WhatIDo />
     </>
   );
 }
@@ -189,6 +190,69 @@ function FeaturedWork() {
         <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3 lg:mt-16 lg:gap-8">
           {projects.map((project) => (
             <ProjectCard key={project.title} {...project} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function WhatIDo() {
+  const services = [
+    {
+      number: "01",
+      title: "Лендинги",
+      description:
+        "Создаю одностраничные сайты для продукта, услуги или личного бренда. Продумываю структуру, визуальную подачу и путь пользователя до целевого действия.",
+    },
+    {
+      number: "02",
+      title: "Веб-прототипы",
+      description:
+        "Превращаю идею в рабочий интерфейс, который можно показать и протестировать.",
+    },
+    {
+      number: "03",
+      title: "UI и адаптив",
+      description:
+        "Создаю аккуратные интерфейсы и адаптирую их под разные размеры экранов.",
+    },
+    {
+      number: "04",
+      title: "AI-инструменты",
+      description:
+        "Использую AI-инструменты для создания и последовательной доработки веб-продуктов.",
+    },
+  ];
+
+  return (
+    <section id="services" className="relative bg-background py-20 sm:py-24 lg:py-28">
+      <div className="mx-auto w-full max-w-[1480px] px-6 sm:px-10 lg:px-14 xl:px-20">
+        <div className="mb-4 flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-primary sm:text-[11px]">
+          <span className="h-px w-10 bg-accent" aria-hidden="true" />
+          <span>What I Do</span>
+        </div>
+
+        <h2 className="max-w-[900px] font-display text-[40px] font-medium leading-[1.05] text-foreground sm:text-[52px] lg:text-[62px]">
+          От идеи к интерфейсу
+        </h2>
+
+        <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:mt-16 lg:gap-6">
+          {services.map((service) => (
+            <article
+              key={service.number}
+              className="service-card group flex flex-col p-6 sm:p-8"
+            >
+              <span className="font-display text-[34px] font-medium leading-none text-primary/80 sm:text-[42px]">
+                {service.number}
+              </span>
+              <h3 className="mt-5 font-display text-[24px] font-medium leading-tight text-foreground sm:text-[28px]">
+                {service.title}
+              </h3>
+              <p className="mt-3 text-[15px] leading-7 text-muted-foreground">
+                {service.description}
+              </p>
+            </article>
           ))}
         </div>
       </div>
