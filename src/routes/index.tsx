@@ -472,11 +472,13 @@ function FocusPreview() {
           </div>
 
           <div className="space-y-2">
-            {[
-              ["Подготовить презентацию", "10:00", true],
-              ["Созвон с командой", "11:00", false],
-              ["Почитать книгу", "19:00", false],
-            ] as const.map(([task, time, done]) => (
+            {(
+              [
+                ["Подготовить презентацию", "10:00", true],
+                ["Созвон с командой", "11:00", false],
+                ["Почитать книгу", "19:00", false],
+              ] as const
+            ).map(([task, time, done]) => (
               <div
                 key={task}
                 className="flex items-center gap-2 rounded-md border border-preview-line bg-preview-field p-1.5"
