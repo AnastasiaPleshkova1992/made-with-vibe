@@ -142,6 +142,7 @@ function Index() {
       </main>
       <FeaturedWork />
       <WhatIDo />
+      <HowIWork />
     </>
   );
 }
@@ -252,6 +253,76 @@ function WhatIDo() {
               <p className="mt-3 text-[15px] leading-7 text-muted-foreground">
                 {service.description}
               </p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function HowIWork() {
+  const steps = [
+    {
+      number: "01",
+      title: "Погружаюсь в задачу",
+      description:
+        "Разбираюсь, что нужно создать, для кого и какой результат должен получить пользователь.",
+    },
+    {
+      number: "02",
+      title: "Собираю структуру",
+      description:
+        "Продумываю блоки, содержание и основной пользовательский сценарий.",
+    },
+    {
+      number: "03",
+      title: "Создаю с AI",
+      description:
+        "Собираю рабочую версию с помощью AI-инструментов и постепенно дорабатываю детали.",
+    },
+    {
+      number: "04",
+      title: "Тестирую и улучшаю",
+      description:
+        "Проверяю адаптивность, читаемость и удобство интерфейса и исправляю найденные проблемы.",
+    },
+  ];
+
+  return (
+    <section id="process" className="relative bg-background py-20 sm:py-24 lg:py-28">
+      <div className="mx-auto w-full max-w-[1480px] px-6 sm:px-10 lg:px-14 xl:px-20">
+        <div className="mb-4 flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-primary sm:text-[11px]">
+          <span className="h-px w-10 bg-accent" aria-hidden="true" />
+          <span>How I Work</span>
+        </div>
+
+        <h2 className="max-w-[900px] font-display text-[40px] font-medium leading-[1.05] text-foreground sm:text-[52px] lg:text-[62px]">
+          От идеи до готового продукта
+        </h2>
+
+        <div className="relative mt-12 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-4 md:gap-6">
+          <div
+            className="absolute left-6 top-0 bottom-0 z-0 w-px bg-primary/20 md:left-0 md:right-0 md:top-6 md:h-px md:w-auto md:bottom-auto"
+            aria-hidden="true"
+          />
+
+          {steps.map((step) => (
+            <article
+              key={step.number}
+              className="relative z-10 flex gap-5 md:flex-col md:items-center md:text-center"
+            >
+              <span className="grid h-12 w-12 shrink-0 place-items-center rounded-full border border-primary/30 bg-card font-display text-lg font-medium text-primary md:mx-auto">
+                {step.number}
+              </span>
+              <div className="min-w-0 flex-1">
+                <h3 className="font-display text-[20px] font-medium leading-tight text-foreground sm:text-[22px]">
+                  {step.title}
+                </h3>
+                <p className="mt-2 text-[14px] leading-6 text-muted-foreground sm:text-[15px] sm:leading-7">
+                  {step.description}
+                </p>
+              </div>
             </article>
           ))}
         </div>
@@ -401,11 +472,13 @@ function FocusPreview() {
           </div>
 
           <div className="space-y-2">
-            {[
-              ["Подготовить презентацию", "10:00", true],
-              ["Созвон с командой", "11:00", false],
-              ["Почитать книгу", "19:00", false],
-            ].map(([task, time, done]) => (
+            {(
+              [
+                ["Подготовить презентацию", "10:00", true],
+                ["Созвон с командой", "11:00", false],
+                ["Почитать книгу", "19:00", false],
+              ] as const
+            ).map(([task, time, done]) => (
               <div
                 key={task}
                 className="flex items-center gap-2 rounded-md border border-preview-line bg-preview-field p-1.5"
