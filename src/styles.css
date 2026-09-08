@@ -59,29 +59,44 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-primary-hover: var(--primary-hover);
+  --color-preview-sidebar: var(--preview-sidebar);
+  --color-preview-line: var(--preview-line);
+  --color-preview-active: var(--preview-active);
+  --color-preview-field: var(--preview-field);
+  --color-preview-pink: var(--preview-pink);
+  --color-preview-peach: var(--preview-peach);
+  --color-preview-dot-red: var(--preview-dot-red);
+  --color-preview-dot-gold: var(--preview-dot-gold);
+  --color-preview-dot-green: var(--preview-dot-green);
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Manrope", Arial, sans-serif;
+  --shadow-soft: 0 10px 30px color-mix(in oklab, var(--primary) 8%, transparent);
+  --shadow-button: 0 12px 26px color-mix(in oklab, var(--primary) 18%, transparent);
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
-  --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --radius: 0.45rem;
+  --background: oklch(0.978 0.011 50);
+  --foreground: oklch(0.24 0.015 335);
+  --card: oklch(0.993 0.006 30);
+  --card-foreground: oklch(0.24 0.015 335);
+  --popover: oklch(0.993 0.006 30);
+  --popover-foreground: oklch(0.24 0.015 335);
+  --primary: oklch(0.39 0.07 340);
+  --primary-hover: oklch(0.33 0.075 340);
+  --primary-foreground: oklch(0.98 0.01 35);
+  --secondary: oklch(0.94 0.026 350);
+  --secondary-foreground: oklch(0.35 0.055 340);
+  --muted: oklch(0.953 0.013 40);
+  --muted-foreground: oklch(0.48 0.025 325);
+  --accent: oklch(0.72 0.075 350);
+  --accent-foreground: oklch(0.26 0.025 335);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --border: oklch(0.87 0.025 345);
+  --input: oklch(0.9 0.02 345);
+  --ring: oklch(0.48 0.065 340);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -95,6 +110,15 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+  --preview-sidebar: oklch(0.976 0.012 350);
+  --preview-line: oklch(0.91 0.02 345);
+  --preview-active: oklch(0.935 0.03 345);
+  --preview-field: oklch(0.987 0.008 30);
+  --preview-pink: oklch(0.88 0.06 345);
+  --preview-peach: oklch(0.89 0.07 55);
+  --preview-dot-red: oklch(0.7 0.17 25);
+  --preview-dot-gold: oklch(0.8 0.13 80);
+  --preview-dot-green: oklch(0.67 0.13 145);
 }
 
 .dark {
@@ -140,5 +164,119 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    letter-spacing: 0;
+  }
+}
+
+@utility hero-surface {
+  background-image:
+    radial-gradient(ellipse at 78% 44%, color-mix(in oklab, var(--preview-pink) 24%, transparent) 0%, transparent 44%),
+    linear-gradient(120deg, color-mix(in oklab, var(--background) 95%, white), var(--background));
+}
+
+@utility preview-window {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid color-mix(in oklab, var(--border) 60%, transparent);
+  border-radius: 1rem;
+  background: color-mix(in oklab, var(--card) 94%, transparent);
+  box-shadow: 0 28px 70px color-mix(in oklab, var(--primary) 14%, transparent);
+  transform: perspective(1200px) rotateY(-2.5deg) rotateZ(1deg);
+}
+
+@utility preview-backdrop {
+  position: absolute;
+  inset: -1.2rem 1.6rem 2rem -1.3rem;
+  border: 1px solid color-mix(in oklab, var(--border) 60%, transparent);
+  border-radius: 1rem;
+  background: color-mix(in oklab, var(--card) 72%, transparent);
+  box-shadow: 0 14px 50px color-mix(in oklab, var(--primary) 7%, transparent);
+  transform: rotate(-1deg);
+}
+
+@utility preview-browserbar {
+  display: flex;
+  align-items: center;
+  gap: 0.38rem;
+  height: 2rem;
+  padding-inline: 0.9rem;
+  border-bottom: 1px solid var(--preview-line);
+  & > span {
+    width: 0.38rem;
+    height: 0.38rem;
+    border-radius: 999px;
+  }
+}
+
+@utility preview-art {
+  background: linear-gradient(155deg, var(--preview-pink), color-mix(in oklab, var(--preview-peach) 65%, var(--card)));
+}
+
+@utility preview-leaf {
+  position: absolute;
+  left: 51%;
+  top: 7%;
+  width: 1px;
+  height: 64%;
+  background: var(--primary);
+  transform: rotate(24deg);
+  opacity: 0.66;
+}
+
+@utility preview-leaf-one {
+  &::before {
+    content: "";
+    position: absolute;
+    left: -1.25rem;
+    top: 25%;
+    width: 1.5rem;
+    height: 3rem;
+    border-radius: 100% 0 100% 0;
+    background: color-mix(in oklab, var(--primary) 72%, transparent);
+    transform: rotate(-30deg);
+  }
+}
+
+@utility preview-leaf-two {
+  transform: translateX(0.4rem) rotate(38deg);
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 17%;
+    width: 1.1rem;
+    height: 2.5rem;
+    border-radius: 0 100% 0 100%;
+    background: color-mix(in oklab, var(--primary) 58%, transparent);
+    transform: rotate(20deg);
+  }
+}
+
+@utility hero-line {
+  position: absolute;
+  pointer-events: none;
+  border: 1px solid color-mix(in oklab, var(--primary) 34%, transparent);
+  border-radius: 999px;
+}
+
+@utility hero-line-top {
+  width: 42rem;
+  height: 42rem;
+  right: -18rem;
+  top: -28rem;
+}
+
+@utility hero-line-bottom {
+  width: 50rem;
+  height: 28rem;
+  left: 18%;
+  bottom: -23rem;
+  transform: rotate(-12deg);
+}
+
+@media (max-width: 1023px) {
+  .preview-window {
+    transform: none;
   }
 }
