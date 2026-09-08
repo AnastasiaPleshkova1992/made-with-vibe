@@ -141,6 +141,7 @@ function Index() {
         </section>
       </main>
       <FeaturedWork />
+      <WhatIDo />
     </>
   );
 }
