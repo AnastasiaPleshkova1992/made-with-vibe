@@ -142,6 +142,7 @@ function Index() {
       </main>
       <FeaturedWork />
       <WhatIDo />
+      <HowIWork />
     </>
   );
 }
