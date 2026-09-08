@@ -100,7 +100,7 @@ function Index() {
       <div className="hero-line hero-line-top" aria-hidden="true" />
       <div className="hero-line hero-line-bottom" aria-hidden="true" />
 
-      <section className="relative mx-auto grid min-h-screen w-full max-w-[1480px] grid-cols-1 items-center gap-16 px-6 py-14 sm:px-10 lg:grid-cols-[0.86fr_1.14fr] lg:gap-12 lg:px-14 lg:py-20 xl:px-20">
+      <section className="relative mx-auto grid min-h-screen w-full max-w-[1480px] grid-cols-1 items-center gap-16 px-6 py-14 sm:px-10 lg:grid-cols-[0.86fr_1.14fr] lg:gap-12 lg:px-14 lg:py-10 xl:px-20">
         <div className="relative z-10 max-w-[650px] pt-2 lg:pt-0">
           <div className="mb-8 flex items-center gap-4 text-[10px] font-semibold uppercase text-primary sm:text-[11px]">
             <span className="h-px w-10 bg-accent" aria-hidden="true" />
