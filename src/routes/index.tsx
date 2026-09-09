@@ -169,13 +169,15 @@ function CallToAction() {
 
           <div className="mt-9 grid gap-3 sm:flex sm:flex-wrap sm:justify-center">
             <a
-              href="#"
+              href="https://t.me/@pleshkova_anastasia"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex min-h-12 items-center justify-center gap-5 rounded-full bg-primary px-7 text-sm font-semibold text-primary-foreground shadow-button transition-[transform,background-color] hover:-translate-y-0.5 hover:bg-primary-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring motion-reduce:transform-none"
             >
               Написать в Telegram <span aria-hidden="true">→</span>
             </a>
             <a
-              href="#"
+              href="mailto:nastya.tsvetkova@rambler.ru"
               className="inline-flex min-h-12 items-center justify-center rounded-full border border-primary bg-transparent px-7 text-sm font-semibold text-primary transition-[transform,background-color] hover:-translate-y-0.5 hover:bg-secondary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring motion-reduce:transform-none"
             >
               Отправить Email
