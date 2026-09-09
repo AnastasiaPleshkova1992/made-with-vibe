@@ -205,11 +205,11 @@ const projects = [
     preview: FocusPreview,
   },
   {
-    title: "Lumi",
+    title: "IdeaFlow",
     description:
-      "Концепт современного лендинга для digital-продукта.",
-    tags: ["Landing Page", "Web Design", "Lovable"],
-    preview: LumiPreview,
+      "Сервис для работы с идеями, который помогает собирать мысли, структурировать их и превращать в понятный план действий.",
+    tags: ["Web App", "AI", "Productivity"],
+    preview: IdeaFlowPreview,
   },
 ];
 
@@ -598,12 +598,12 @@ function FocusPreview() {
   );
 }
 
-function LumiPreview() {
+function IdeaFlowPreview() {
   return (
     <div className="project-preview-frame flex h-full flex-col">
       <div className="project-preview-bar justify-between">
         <span className="font-display text-[9px] font-semibold text-foreground">
-          Lumi
+          IdeaFlow
         </span>
         <div className="flex items-center gap-2">
           <span className="hidden text-[7px] text-muted-foreground sm:inline">
