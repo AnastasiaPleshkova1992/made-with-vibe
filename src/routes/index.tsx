@@ -143,7 +143,47 @@ function Index() {
       <FeaturedWork />
       <WhatIDo />
       <HowIWork />
+      <CallToAction />
     </>
+  );
+}
+
+function CallToAction() {
+  return (
+    <section id="contact" className="cta-surface relative py-20 sm:py-24 lg:py-28">
+      <div className="mx-auto w-full max-w-[1480px] px-6 sm:px-10 lg:px-14 xl:px-20">
+        <div className="mx-auto max-w-[900px] text-center">
+          <div className="mb-4 flex items-center justify-center gap-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-primary sm:text-[11px]">
+            <span className="h-px w-10 bg-accent" aria-hidden="true" />
+            <span>Let’s Create</span>
+            <span className="h-px w-10 bg-accent" aria-hidden="true" />
+          </div>
+
+          <h2 className="font-display text-[40px] font-medium leading-[1.05] text-foreground sm:text-[52px] lg:text-[62px]">
+            Есть идея? Давайте сделаем её реальной.
+          </h2>
+
+          <p className="mx-auto mt-5 max-w-[640px] text-[15px] leading-7 text-muted-foreground sm:text-base">
+            Помогу превратить задумку в понятный, аккуратный и современный веб-продукт.
+          </p>
+
+          <div className="mt-9 grid gap-3 sm:flex sm:flex-wrap sm:justify-center">
+            <a
+              href="#"
+              className="inline-flex min-h-12 items-center justify-center gap-5 rounded-full bg-primary px-7 text-sm font-semibold text-primary-foreground shadow-button transition-[transform,background-color] hover:-translate-y-0.5 hover:bg-primary-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring motion-reduce:transform-none"
+            >
+              Написать в Telegram <span aria-hidden="true">→</span>
+            </a>
+            <a
+              href="#"
+              className="inline-flex min-h-12 items-center justify-center rounded-full border border-primary bg-transparent px-7 text-sm font-semibold text-primary transition-[transform,background-color] hover:-translate-y-0.5 hover:bg-secondary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring motion-reduce:transform-none"
+            >
+              Отправить Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 
