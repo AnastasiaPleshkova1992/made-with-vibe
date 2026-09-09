@@ -215,7 +215,7 @@ const projects = [
 
 function FeaturedWork() {
   return (
-    <section id="projects" className="relative bg-background py-20 sm:py-24 lg:py-28">
+    <section id="projects" className="section-surface relative py-16 sm:py-20 lg:py-22">
       <div className="mx-auto w-full max-w-[1480px] px-6 sm:px-10 lg:px-14 xl:px-20">
         <div className="mb-4 flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-primary sm:text-[11px]">
           <span className="h-px w-10 bg-accent" aria-hidden="true" />
@@ -269,7 +269,7 @@ function WhatIDo() {
   ];
 
   return (
-    <section id="services" className="relative bg-background py-20 sm:py-24 lg:py-28">
+    <section id="services" className="section-surface relative py-16 sm:py-20 lg:py-22">
       <div className="mx-auto w-full max-w-[1480px] px-6 sm:px-10 lg:px-14 xl:px-20">
         <div className="mb-4 flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-primary sm:text-[11px]">
           <span className="h-px w-10 bg-accent" aria-hidden="true" />
@@ -332,7 +332,7 @@ function HowIWork() {
   ];
 
   return (
-    <section id="process" className="relative bg-background py-20 sm:py-24 lg:py-28">
+    <section id="process" className="section-surface relative py-16 sm:py-20 lg:py-22">
       <div className="mx-auto w-full max-w-[1480px] px-6 sm:px-10 lg:px-14 xl:px-20">
         <div className="mb-4 flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-primary sm:text-[11px]">
           <span className="h-px w-10 bg-accent" aria-hidden="true" />
