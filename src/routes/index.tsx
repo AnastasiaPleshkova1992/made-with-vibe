@@ -150,7 +150,7 @@ function Index() {
 
 function CallToAction() {
   return (
-    <section id="contact" className="cta-surface relative py-20 sm:py-24 lg:py-28">
+    <section id="contact" className="cta-surface relative pt-12 pb-20 sm:pt-14 sm:pb-24 lg:pt-16 lg:pb-28">
       <div className="mx-auto w-full max-w-[1480px] px-6 sm:px-10 lg:px-14 xl:px-20">
         <div className="mx-auto max-w-[900px] text-center">
           <div className="mb-4 flex items-center justify-center gap-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-primary sm:text-[11px]">
@@ -332,7 +332,7 @@ function HowIWork() {
   ];
 
   return (
-    <section id="process" className="section-surface relative py-16 sm:py-20 lg:py-22">
+    <section id="process" className="process-surface relative pt-16 pb-12 sm:pt-20 sm:pb-14 lg:pt-22 lg:pb-16">
       <div className="mx-auto w-full max-w-[1480px] px-6 sm:px-10 lg:px-14 xl:px-20">
         <div className="mb-4 flex items-center gap-4 text-[10px] font-semibold uppercase tracking-[0.22em] text-primary sm:text-[11px]">
           <span className="h-px w-10 bg-accent" aria-hidden="true" />
