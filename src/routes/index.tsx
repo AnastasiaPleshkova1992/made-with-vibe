@@ -133,7 +133,7 @@ function Index() {
           </div>
 
           <div className="relative z-10 w-full pb-4 lg:pb-0">
-            <div className="mb-5 flex items-center justify-end gap-3 text-[9px] font-semibold uppercase text-muted-foreground sm:text-[10px]">
+            <div className="mb-8 flex items-center justify-end gap-3 text-[9px] font-semibold uppercase text-muted-foreground sm:text-[10px]">
               <span>ИДЕИ</span><span>×</span><span>ДИЗАЙН</span><span>×</span><span>ПРОДУКТ</span>
             </div>
             <InterfacePreview />
