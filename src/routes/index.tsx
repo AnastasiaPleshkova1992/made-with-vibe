@@ -169,7 +169,7 @@ function CallToAction() {
 
           <div className="mt-9 grid gap-3 sm:flex sm:flex-wrap sm:justify-center">
             <a
-              href="https://t.me/@pleshkova_anastasia"
+              href="https://t.me/pleshkova_anastasia"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex min-h-12 items-center justify-center gap-5 rounded-full bg-primary px-7 text-sm font-semibold text-primary-foreground shadow-button transition-[transform,background-color] hover:-translate-y-0.5 hover:bg-primary-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ring motion-reduce:transform-none"
