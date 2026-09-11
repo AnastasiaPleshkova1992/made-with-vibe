@@ -423,12 +423,12 @@ function ProjectCard({
 
 function WardrobePreview() {
   const wardrobeItems = [
-    { name: "Рубашка", gradient: "from-preview-pink/55 to-preview-pink/25" },
-    { name: "Брюки", gradient: "from-preview-peach/55 to-preview-peach/25" },
-    { name: "Платье", gradient: "from-primary/20 to-primary/5" },
-    { name: "Сумка", gradient: "from-preview-pink/50 to-preview-pink/20" },
-    { name: "Обувь", gradient: "from-preview-peach/50 to-preview-peach/20" },
-    { name: "Пальто", gradient: "from-primary/15 to-primary/5" },
+    { name: "Жакет", image: jacketImg },
+    { name: "Рубашка", image: shirtImg },
+    { name: "Брюки", image: trousersImg },
+    { name: "Сумка", image: bagImg },
+    { name: "Обувь", image: shoesImg },
+    { name: "Образ", image: outfitImg },
   ];
 
   return (
