@@ -506,7 +506,12 @@ function WardrobePreview() {
                   key={item.name}
                   className="flex flex-col gap-1 rounded-md border border-preview-line bg-card p-1.5"
                 >
-                  <div className={`aspect-square rounded bg-gradient-to-br ${item.gradient}`} />
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    loading="lazy"
+                    className="aspect-square rounded object-cover"
+                  />
                   <span className="truncate text-[6px] text-muted-foreground">
                     {item.name}
                   </span>
