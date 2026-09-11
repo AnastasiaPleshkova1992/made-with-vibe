@@ -1,4 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
+import jacketImg from "@/assets/wardrobe/jacket.jpg";
+import shirtImg from "@/assets/wardrobe/shirt.jpg";
+import trousersImg from "@/assets/wardrobe/trousers.jpg";
+import shoesImg from "@/assets/wardrobe/shoes.jpg";
+import bagImg from "@/assets/wardrobe/bag.jpg";
+import outfitImg from "@/assets/wardrobe/outfit.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -417,12 +423,12 @@ function ProjectCard({
 
 function WardrobePreview() {
   const wardrobeItems = [
-    { name: "Рубашка", gradient: "from-preview-pink/55 to-preview-pink/25" },
-    { name: "Брюки", gradient: "from-preview-peach/55 to-preview-peach/25" },
-    { name: "Платье", gradient: "from-primary/20 to-primary/5" },
-    { name: "Сумка", gradient: "from-preview-pink/50 to-preview-pink/20" },
-    { name: "Обувь", gradient: "from-preview-peach/50 to-preview-peach/20" },
-    { name: "Пальто", gradient: "from-primary/15 to-primary/5" },
+    { name: "Жакет", image: jacketImg },
+    { name: "Рубашка", image: shirtImg },
+    { name: "Брюки", image: trousersImg },
+    { name: "Сумка", image: bagImg },
+    { name: "Обувь", image: shoesImg },
+    { name: "Образ", image: outfitImg },
   ];
 
   return (
@@ -500,7 +506,12 @@ function WardrobePreview() {
                   key={item.name}
                   className="flex flex-col gap-1 rounded-md border border-preview-line bg-card p-1.5"
                 >
-                  <div className={`aspect-square rounded bg-gradient-to-br ${item.gradient}`} />
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    loading="lazy"
+                    className="aspect-square rounded object-cover"
+                  />
                   <span className="truncate text-[6px] text-muted-foreground">
                     {item.name}
                   </span>
@@ -512,12 +523,13 @@ function WardrobePreview() {
               <div className="font-display text-[8px] font-medium leading-tight text-primary">
                 Твой образ
               </div>
-              <div className="mt-2 flex flex-1 flex-col items-center justify-center gap-1.5">
-                <div className="h-5 w-5 rounded bg-gradient-to-br from-preview-pink/60 to-preview-pink/30" />
-                <div className="h-6 w-5 rounded bg-gradient-to-br from-preview-peach/60 to-preview-peach/30" />
-                <div className="h-4 w-5 rounded bg-gradient-to-br from-primary/20 to-primary/5" />
-              </div>
-              <div className="mt-auto rounded-full bg-primary/10 px-1 py-0.5 text-center text-[6px] font-medium text-primary">
+              <img
+                src={outfitImg}
+                alt="Готовый образ"
+                loading="lazy"
+                className="mt-2 w-full flex-1 rounded object-cover"
+              />
+              <div className="mt-2 rounded-full bg-primary/10 px-1 py-0.5 text-center text-[6px] font-medium text-primary">
                 Сохранить
               </div>
             </div>
