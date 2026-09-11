@@ -1,4 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
+import jacketImg from "@/assets/wardrobe/jacket.jpg";
+import shirtImg from "@/assets/wardrobe/shirt.jpg";
+import trousersImg from "@/assets/wardrobe/trousers.jpg";
+import shoesImg from "@/assets/wardrobe/shoes.jpg";
+import bagImg from "@/assets/wardrobe/bag.jpg";
+import outfitImg from "@/assets/wardrobe/outfit.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
