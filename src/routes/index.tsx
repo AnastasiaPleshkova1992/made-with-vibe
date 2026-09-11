@@ -523,12 +523,13 @@ function WardrobePreview() {
               <div className="font-display text-[8px] font-medium leading-tight text-primary">
                 Твой образ
               </div>
-              <div className="mt-2 flex flex-1 flex-col items-center justify-center gap-1.5">
-                <div className="h-5 w-5 rounded bg-gradient-to-br from-preview-pink/60 to-preview-pink/30" />
-                <div className="h-6 w-5 rounded bg-gradient-to-br from-preview-peach/60 to-preview-peach/30" />
-                <div className="h-4 w-5 rounded bg-gradient-to-br from-primary/20 to-primary/5" />
-              </div>
-              <div className="mt-auto rounded-full bg-primary/10 px-1 py-0.5 text-center text-[6px] font-medium text-primary">
+              <img
+                src={outfitImg}
+                alt="Готовый образ"
+                loading="lazy"
+                className="mt-2 w-full flex-1 rounded object-cover"
+              />
+              <div className="mt-2 rounded-full bg-primary/10 px-1 py-0.5 text-center text-[6px] font-medium text-primary">
                 Сохранить
               </div>
             </div>
